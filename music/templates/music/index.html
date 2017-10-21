@@ -1,63 +1,8 @@
 <!-- Loads the path to the static files -->
+{% extends "music/base.html" %}
+
+{% block body %}
 {% load staticfiles %}
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-<link rel="stylesheet" href=" {% static 'music/static.css' %} ">
-
-
-
-
-
-  <!-- example 2 - using auto margins -->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="{% url 'music:index' %}">Music App</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="navbar-collapse collapse dual-collapse">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Albums</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="#">Songs</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li>
- 
-            </li>
-            
-        </ul>
-        
-        <form class=" form-inline" role="search" method="get" action="">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" name="q" aria-label="Search">
-                <button class="btn btn-default my-2 my-sm-0" type="submit">Search</button>
-            </form>
-
-    </div>
-
-    <!-- <a class="navbar-brand d-flex mx-auto" href="#">Navbar 2</a> -->
-
-  
-
-    <div class="navbar-collapse collapse dual-collapse">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Add Album</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Logout</a>
-            </li>
-        </ul>
-    </div>
-</nav>
 
 
 
@@ -71,3 +16,6 @@
 {% else %}
     <h3>There are no albums to show</h3>
 {% endif %}
+
+
+{% endblock %}
