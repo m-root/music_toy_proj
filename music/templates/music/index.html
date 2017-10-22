@@ -1,21 +1,14 @@
 <!-- Loads the path to the static files -->
 {% extends "music/base.html" %}
-
+{% block title %} Music Landing Page {% endblock%}
 {% block body %}
-{% load staticfiles %}
 
 
-
-{% if all_albums %}
-    <h3>Here are all the albums</h3>
     <ul>
         {% for album in all_albums %}
-        <li><a href=" {% url 'music:detail' album.id %} ">{{ album.album_title }} </li>
+        <li><a href="{% url 'music:detail' album.id %}">{{ album.album_title}}</a> </li>
         {% endfor %}
     </ul>
-{% else %}
-    <h3>There are no albums to show</h3>
-{% endif %}
 
 
 {% endblock %}
